@@ -12,8 +12,13 @@
             <field name="arch" type="xml">
                     <form string="">
                         <header>
+                            <button name="waiting" type="object" string="Waiting list" class="btn-warning"/>
+                            <button name="admit" type="object" string="Admit" class="btn-success"/>
+                            <field name="status" widget="statusbar" statusbar_visible="Waiting list,Admitted"/>
                         </header>
                         <sheet>
+                        <widget name="web_ribbon" title="Waiting list" bg_color="bg-warning" attrs="{'invisible':[('status','!=','Waiting list')]}"/>   
+                        <widget name="web_ribbon" title="Admitted" bg_color="bg-success" attrs="{'invisible':[('status','!=','Admitted')]}"/>   
                         <h1 style="text-align:center;">Student Details</h1>
                                 <div style="box-shadow:0 0 9px 3px grey;width:50%;margin:0 auto;padding:20px 20px;margin-top:60px;color:white;background-color:black;font-weight:bold;">
                                     <group>

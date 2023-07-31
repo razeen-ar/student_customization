@@ -7,3 +7,10 @@ class Student(models.Model):
     name = fields.Char(string="Name")
     age = fields.Integer(string="Age")
     class_ = fields.Char(string="Class")
+    status  = fields.Selection([('Waiting list', 'Waiting list'),('Admitted','Admitted')],default="Waiting list")
+
+    def waiting(self):
+        self.write({'status':'Waiting list'})
+
+    def admit(self):
+        self.write({'status':'Admitted'})    
