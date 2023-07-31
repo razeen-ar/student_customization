@@ -13,4 +13,4 @@ class Student(models.Model):
         self.write({'status':'Waiting list'})
 
     def admit(self):
-        self.write({'status':'Admitted'})...
+        self.write({'status':'Admitted'})
