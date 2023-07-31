@@ -10,18 +10,19 @@
             <field name="name">student.form</field>
             <field name="model">student.student</field>
             <field name="arch" type="xml">
-                <form string="">
-                    <header>
-                    </header>
-                    <sheet>
-                        <group>
-                            <group>
-                                <field name="name"/>
-                                <field name="age"/>
-                                <field name="class_"/>
-                            </group>
-                        </group>
-                    </sheet>
+                    <form string="">
+                        <header>
+                        </header>
+                        <sheet>
+                        <h1 style="text-align:center;">Student Details</h1>
+                                <div style="box-shadow:0 0 9px 3px grey;width:50%;margin:0 auto;padding:20px 20px;margin-top:60px;color:white;background-color:black;font-weight:bold;">
+                                    <group>
+                                            <field name="name"/>
+                                            <field name="age"/>
+                                            <field name="class_"/>
+                                    </group>
+                                </div>
+                        </sheet>
                 </form>
             </field>
         </record>
