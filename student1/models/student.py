@@ -7,6 +7,7 @@ class Student(models.Model):
     name = fields.Char(string="Name")
     age = fields.Integer(string="Age")
     class_ = fields.Char(string="Class")
+    image  = fields.Binary(string="Image")
     status  = fields.Selection([('Waiting list', 'Waiting list'),('Admitted','Admitted')],default="Waiting list")
 
     def waiting(self):

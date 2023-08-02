@@ -27,9 +27,10 @@
                         <div
                             style="box-shadow:0 0 9px 3px grey;width:50%;margin:0 auto;padding:20px 20px;margin-top:60px;font-weight:bold;">
                             <group>
-                                <field name="name" />
-                                <field name="age" />
-                                <field name="class_" />
+                                <field name="image" widget="image"/>
+                                <field name="name" attrs="{'required':True}"/>
+                                <field name="age" attrs="{'required':True}"/>
+                                <field name="class_" attrs="{'required':True}"/>
                             </group>
                         </div>
                     </sheet>
@@ -45,6 +46,7 @@
                     <field name="name" />
                     <field name="age" />
                     <field name="class_" />
+                    <field name="image" />
                 </tree>
             </field>
         </record>
@@ -54,7 +56,7 @@
             <field name="model">student.student</field>
             <field name="arch" type="xml">
                 <kanban string="">
-                    <field name="name" />
+                    <field name="name"/>
                     <field name="age" />
                     <field name="class_" />
 
@@ -64,13 +66,13 @@
                                 style="box-shadow:0 0 9px 3px grey;padding:30px 30px;width:500px;font-family:sanserif;margin-top:50px;margin-left:50px;">
 
                                 <div class="oe_kanban_details" style="font-size:25px">
-                                    <div style="box-shadow:0 0 9px 3px grey;margin-bottom:50px;border-radius:5px;text-align:center;background:linear-gradient(to right,white,cyan,white)">
+                                    <div style="box-shadow:0 0 9px 3px grey;margin-bottom:50px;border-radius:5px;text-align:center;background:linear-gradient(to right,white,black,white);color:white;text-shadow:0 0 9px black">
                                         <strong class="o_kanban_record_title"
                                             style="font-size:25px;font-weight:bold;font-family:sanserif">
                                             <field name="name" />
                                         </strong>
                                     </div> 
-                                    <div style="box-shadow:0 0 9px 3px grey;padding:10px 10px;font-weight:bold;font-size:20px;background:linear-gradient(to right,white,cyan,white);color:black;">
+                                    <div style="box-shadow:0 0 9px 3px grey;padding:10px 10px;font-size:20px;color:black;text-shadow:2px 2px grey ;">
                                         <div style="display:flex;margin-left:20px;">
                                             <div t-if="record.age.value">
                                                 <t t-esc="record.age.value" />
